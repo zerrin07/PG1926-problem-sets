@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHP ile Parayı kuruşlara ayırma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ 
+<body>
+ 
+<form action="paraayirma2.php" method="post">
+<table border="0" bgcolor="#FF6666">
+  <tr bgcolor="#00FF99">
+    <td colspan="2" align="center">PHP Parayı Banknotlara Ayırma</td>
+    </tr>
+  <tr>
+    <td>Para Tutarını Giriniz:</td>
+    <td><input name="para" type="text" /></td>
+  </tr>
+  
+  <tr bgcolor="#00FF99">
+    <td>&nbsp;</td>
+    <td><input name="gonder" type="submit" value="Parayı Ayrıştır" /></td>
+  </tr>
+</table>
+ 
+</form>
+<br />
+ 
+</body>
+</html>
+
+//PARA AYIRMA//
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHP Parayı Banknotlara Ayırma-2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+ 
+<body>
+<?php
+$para=$_POST['para'];
+$tpara=$para;
+ 
+$a200=0;
+$a100=0;
+$a50=0;
+$a20=0;
+$a10=0;
+$a5=0;
+$a1=0;
+ 
+ //200 lük banknot adedi
+            if ($para >= 200)
+            {
+                $a200 = $para / 200;
+                $tpara = $para % 200;
+				$para = intval($tpara);
+            }
+ 
+            //100 lük banknot adedi
+            if ($para >= 100)
+            {
+                $a100 = $para / 100;
+                $tpara = $para % 100;
+				$para = intval($tpara);
+            }
+ 
+            //50 lik banknot adedi
+            if ($para >= 50)
+            {
+                $a50 = $para / 50;
+                $tpara = $para % 50;
+				$para = intval($tpara);
+            }
+ 
+            //20 lik banknot adedi
+            if ($para >= 20)
+            {
+                $a20 = $para / 20;
+                $tpara = $para % 20;
+				$para = intval($tpara);
+            }
+ 
+            //10 luk banknot adedi
+            if ($para >= 10)
+            {
+                $a10 = $para / 10;
+                $tpara = $para % 10;
+				$para = intval($tpara);
+            }
+ 
+            //5 lik banknot adedi
+            if ($para >= 5)
+            {
+                $a5 = $para / 5;
+                $tpara = $para % 5;
+				$para = intval($tpara);
+            }
+ 
+            //1 lik banknot adedi
+            if ($para >= 1)
+            {
+                $a1 = $para / 1;
+                $tpara = $para % 1;
+				$para = intval($tpara);
+            }
+ 
+?>
+ 
+<table width="393" border="1" bgcolor="#FFFF66">
+  <tr bgcolor="#00CCCC">
+    <td colspan="2" align="center">PHP Parayı Banknotlara Ayırma</td>
+  </tr>
+  <tr bgcolor="#99FF66">
+    <td width="180">Girilen Para Tutarı:</td>
+    <td width="239"><?php echo $_POST['para'];; ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>200'lük Banknot
+    
+ 
+ 
+    
+    </td>
+    <td><?php echo intval($a200); ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>100'lük Banknot</td>
+    <td><?php echo intval($a100); ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>50'lik Banknot</td>
+    <td><?php echo intval($a50); ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>20'lik Banknot</td>
+    <td><?php echo intval($a20); ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>10'luk Banknot</td>
+    <td><?php echo intval($a10); ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>5'lik Banknot</td>
+    <td><?php echo intval($a5); ?></td>
+  </tr>
+  <tr bgcolor="#CC9966">
+    <td>1'lik Para</td>
+    <td><?php echo intval($a1); ?></td>
+  </tr>
+</table>
+<A HREF="javascript:javascript:history.go(-1)">Geri dön</A>
+<br />
+ 
+</body>
+</html>
