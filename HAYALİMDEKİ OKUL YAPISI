@@ -1,0 +1,37 @@
+class okul:
+    def __init__(self, isim, konum, bahce, sistem, toplamSınıf, ogretmenSayisi, yabancıDil) :
+       self.isim = isim
+       self.konum = konum
+       self.bahce = bahce
+       self.sistem = sistem
+       self.toplamSınıf = toplamSınıf
+       self.ogretmenSayisi = ogretmenSayisi
+       self.yabancıDil= yabancıDil
+    
+okul_1 = okul("Mehmet akif","İstanbul","Geniş","Meslek lisesi","100","70","ingilizce") 
+okul_2 = okul("Alibeyköy","İstanbul","Küçük","butik lise","50","30","Fransızca")
+okul_3 = okul("Pendik","İstanbul","Orta","Anadolu lisesi","60","25","Almanca")  
+
+print(okul_1.isim)
+print(okul_1.konum)
+print(okul_1.bahce)
+print(okul_1.sistem)
+print(okul_1.toplamSınıf)
+print(okul_1.ogretmenSayisi)
+print(okul_1.yabancıDil)
+
+print(okul_2.isim)
+print(okul_2.konum)
+print(okul_2.bahce)
+print(okul_2.sistem)
+print(okul_2.toplamSınıf)
+print(okul_2.ogretmenSayisi)
+print(okul_2.yabancıDil)
+
+print(okul_3.isim)
+print(okul_3.konum)
+print(okul_3.bahce)
+print(okul_3.sistem)
+print(okul_3.toplamSınıf)
+print(okul_3.ogretmenSayisi)
+print(okul_3.yabancıDil)
