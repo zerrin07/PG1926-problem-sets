@@ -1,0 +1,34 @@
+<?php
+header('Content-Type: text/html; charset=utf-8');
+$postUrl='http://panel.vatansms.com/panel/smsgonder1Npost.php';
+
+$KULLANICIADI='';
+$SIFRE='';
+$ORGINATOR="";
+
+$TUR='Normal';
+$ZAMAN='06:00:00-10:00:00';
+$mesaj1='Günaydın';
+
+$ZAMAN='10:00:00-17:00:00';
+$mesaj2='İyi günler';
+
+$ZAMAN='17:00:00-20:00:00';
+$mesaj3='İyi akşamlar';
+
+$ZAMAN='20:00:00-00:00:00';
+$mesaj4='İyi geceler';
+
+$ZAMAN='00:00:00-06:00:00';
+$mesaj5='Esenlikler dilerim';
+
+
+$xmlString='data=<mesaj>
+
+<kulad>'. $KULLANICIADI .'</kulad>
+<sifre>'.$SIFRE .'</sifre>
+<gonderen>'.  $ORGINATOR .'</gonderen>
+<mesaj>'. $mesaj1 .'</mesaj>
+<tur>'. $TUR .'</tur>
+</mesaj>';
+?>
