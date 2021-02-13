@@ -1,0 +1,14 @@
+lst = []
+adet = int(input('Kaç Sayı Girilecek: '))
+for n in range(adet):
+    sayi = int(input('Sayiyi Gir:  '))
+    lst.append(sayi)
+print("Girilen liste:   ")
+del lst[6]
+del lst[0:6]
+
+eleman = lst.pop() 
+eleman = lst.pop()
+lst.insert(0,0)
+lst.insert(1,0)
+print("Listenin son hali:  ")
