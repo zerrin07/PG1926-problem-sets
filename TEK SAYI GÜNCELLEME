@@ -1,0 +1,9 @@
+lst = []
+adet = int(input('Kaç Sayı Girilecek: '))
+for n in range(adet):
+    sayi = int(input('Sayiyi Gir:  '))
+    lst.append(sayi)
+if sayi % 2 != 0: 
+       print(sayi, end = " ")  
+print("Liste içindeki En büyük Sayi  :"  ,max(lst) ,sayi)
+ 
